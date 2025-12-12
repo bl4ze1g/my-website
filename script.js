@@ -100,24 +100,3 @@ window.addEventListener('resize', debounce(function () {
 
 // Export theme manager for web components
 window.ThemeManager = themeManager;
-
-// Mouse Tracker Trail
-document.addEventListener('mousemove', function (e) {
-    const trail = document.createElement('div');
-    trail.className = 'mouse-trail';
-    trail.style.left = e.clientX + 'px';
-    trail.style.top = e.clientY + 'px';
-    document.body.appendChild(trail);
-
-    // Animate
-    requestAnimationFrame(() => {
-        trail.style.transition = 'all 1s ease-out';
-        trail.style.opacity = '0';
-        trail.style.transform = 'translate(-50%, -50%) scale(2)';
-    });
-
-    // Cleanup
-    setTimeout(() => {
-        trail.remove();
-    }, 1000);
-});

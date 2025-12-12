@@ -144,3 +144,17 @@ body {
         height: 2.5rem;
     }
 }
+
+/* Mouse Tracker Trail */
+.mouse-trail {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.6), rgba(168, 85, 247, 0));
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+}

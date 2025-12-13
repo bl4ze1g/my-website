@@ -48,3 +48,71 @@ window.addEventListener('resize', debounce(function () {
         feather.replace();
     }
 }, 250));
+
+class Typewriter {
+    constructor(elementId, texts, waitTime = 3000) {
+        this.element = document.getElementById(elementId);
+        this.texts = texts;
+        this.waitTime = waitTime;
+        this.txt = '';
+        this.wordIndex = 0;
+        this.isDeleting = false;
+        this.type();
+        this.element.classList.add('cursor');
+    }
+
+    type() {
+        const currentHook = this.wordIndex % this.texts.length;
+        const fullTxt = this.texts[currentHook];
+
+        if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.element.textContent = this.txt;
+
+        let typeSpeed = 100;
+
+        if (this.isDeleting) {
+            typeSpeed /= 2;
+        }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+            typeSpeed = this.waitTime;
+            this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.wordIndex++;
+            typeSpeed = 500;
+        }
+
+        setTimeout(() => this.type(), typeSpeed);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    new Typewriter('typewriter-text', ['Jane Wirz', 'bl4zee']);
+});
+
+function updateAge() {
+    const ageElement = document.getElementById('age-display');
+    if (!ageElement) return;
+
+    const birthDate = new Date('2005-12-16');
+    const today = new Date();
+    
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const m = today.getMonth() - birthDate.getMonth();
+    
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+
+    ageElement.textContent = age + ' years old';
+}
+
+document.addEventListener('DOMContentLoaded', updateAge);
+// Also update daily just in case the site is left open
+setInterval(updateAge, 86400000);

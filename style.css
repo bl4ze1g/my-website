@@ -95,6 +95,54 @@ body {
     border: 1px solid rgba(139, 92, 246, 0.2);
 }
 
+/* Badges */
+.badge {
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+}
+
+.badge-lavender {
+    background: rgba(139, 92, 246, 0.15);
+    /* lavender-500 */
+    color: #c4b5fd;
+    /* lavender-300 */
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.badge-lavender:hover {
+    background: rgba(139, 92, 246, 0.25);
+    border-color: rgba(139, 92, 246, 0.5);
+}
+
+.badge-pastel {
+    background: rgba(168, 85, 247, 0.15);
+    /* pastel-purple-500 */
+    color: #d8b4fe;
+    /* pastel-purple-300 */
+    border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.badge-pastel:hover {
+    background: rgba(168, 85, 247, 0.25);
+    border-color: rgba(168, 85, 247, 0.5);
+}
+
+.badge-deep {
+    background: rgba(124, 58, 237, 0.15);
+    /* lavender-600 */
+    color: #a78bfa;
+    /* lavender-400 */
+    border: 1px solid rgba(124, 58, 237, 0.3);
+}
+
+.badge-deep:hover {
+    background: rgba(124, 58, 237, 0.25);
+    border-color: rgba(124, 58, 237, 0.5);
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
@@ -143,5 +191,26 @@ body {
     .icon-container {
         width: 2.5rem;
         height: 2.5rem;
+    }
+}
+
+/* Typewriter Cursor */
+.cursor::after {
+    content: '|';
+    animation: blink 1s step-end infinite;
+    color: #c4b5fd;
+    /* lavender-300 to match the gradient start */
+    margin-left: 2px;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
     }
 }

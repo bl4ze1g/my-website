@@ -218,7 +218,7 @@ function executeCommand(container) {
     const newPrompt = document.createElement('div');
     newPrompt.className = 'prompt';
     newPrompt.innerHTML = `
-        <span class="prompt-user">bl4ze</span><span class="prompt-at">@</span><span class="prompt-host">c0re</span>
+        <span class="prompt-user">bl4zee</span><span class="prompt-at">@</span><span class="prompt-host">c0re</span>
         <span class="prompt-path">~</span>
         <span class="prompt-symbol">&gt;</span>
         <span class="input-line"></span><span class="cursor-block"></span>

@@ -217,7 +217,8 @@ body {
 
 /* Terminal Emulator */
 .terminal-window {
-    background: #1e1e2e; /* Catppuccin Mocha Base */
+    background: #1e1e2e;
+    /* Catppuccin Mocha Base */
     border-radius: 0.75rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(139, 92, 246, 0.2);
@@ -229,7 +230,8 @@ body {
 }
 
 .terminal-header {
-    background: #181825; /* Mantle */
+    background: #181825;
+    /* Mantle */
     padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
@@ -243,9 +245,17 @@ body {
     border-radius: 50%;
 }
 
-.dot-red { background: #f38ba8; }
-.dot-yellow { background: #f9e2af; }
-.dot-green { background: #a6e3a1; }
+.dot-red {
+    background: #f38ba8;
+}
+
+.dot-yellow {
+    background: #f9e2af;
+}
+
+.dot-green {
+    background: #a6e3a1;
+}
 
 .terminal-title {
     margin-left: auto;
@@ -257,10 +267,12 @@ body {
 
 .terminal-body {
     padding: 1.5rem;
-    color: #cdd6f4; /* Text */
+    color: #cdd6f4;
+    /* Text */
     font-size: 0.9rem;
     line-height: 1.5;
     overflow-x: auto;
+    min-height: 680px;
 }
 
 .prompt {
@@ -270,11 +282,31 @@ body {
     margin-bottom: 0.5rem;
 }
 
-.prompt-user { color: #89b4fa; font-weight: bold; } /* Blue */
-.prompt-at { color: #cdd6f4; }
-.prompt-host { color: #89b4fa; font-weight: bold; }
-.prompt-path { color: #f5c2e7; } /* Pink */
-.prompt-symbol { color: #a6e3a1; } /* Green */
+.prompt-user {
+    color: #89b4fa;
+    font-weight: bold;
+}
+
+/* Blue */
+.prompt-at {
+    color: #cdd6f4;
+}
+
+.prompt-host {
+    color: #89b4fa;
+    font-weight: bold;
+}
+
+.prompt-path {
+    color: #f5c2e7;
+}
+
+/* Pink */
+.prompt-symbol {
+    color: #a6e3a1;
+}
+
+/* Green */
 
 .input-line {
     display: inline-block;
@@ -290,8 +322,15 @@ body {
 }
 
 @keyframes blink-block {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 
 .neofetch-output {
@@ -306,14 +345,15 @@ body {
         flex-direction: row;
         align-items: flex-start;
     }
-    
+
     .logo-art {
         flex-shrink: 0;
     }
 }
 
 .logo-art {
-    color: #89b4fa; /* Arch Blue */
+    color: #89b4fa;
+    /* Arch Blue */
     font-weight: bold;
     white-space: pre;
     line-height: 1.2;
@@ -331,7 +371,8 @@ body {
 }
 
 .info-key {
-    color: #89b4fa; /* Blue */
+    color: #89b4fa;
+    /* Blue */
     font-weight: bold;
 }
 
